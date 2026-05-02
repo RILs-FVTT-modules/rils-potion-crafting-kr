@@ -63,6 +63,20 @@ Hooks.once("ready", () => {
                 );
                 if (found) return found;
             }
+
+            // 3. Babele 번역명 매칭 ('{한글번역} {영문원본}' 형식 대응)
+            //    예: 검색 'Herbalism Kit' ↔ 아이템 '약초학 키트 Herbalism Kit'
+            if (name) {
+                const babelMatch = this.find((i) => {
+                    if (!i.name) return false;
+                    return (
+                        i.name.endsWith(` ${name}`) ||
+                        name.endsWith(` ${i.name}`)
+                    );
+                });
+                if (babelMatch) return babelMatch;
+            }
+
             return undefined;
         };
 
