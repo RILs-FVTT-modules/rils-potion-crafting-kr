@@ -19,7 +19,8 @@
   ],
   "esmodules": [
     "scripts/babele-register.js",
-    "scripts/mastercrafted-ui.js"
+    "scripts/mastercrafted-ui.js",
+    "scripts/gatherer-ui.js"
   ],
   "compatibility": {
     "minimum": "13",

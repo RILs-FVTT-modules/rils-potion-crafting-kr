@@ -39,7 +39,8 @@ jobs:
             module.json \
             languages/ \
             scripts/babele-register.js \
-            scripts/mastercrafted-ui.js
+            scripts/mastercrafted-ui.js \
+            scripts/gatherer-ui.js
 
       - name: Create release
         uses: softprops/action-gh-release@v2
